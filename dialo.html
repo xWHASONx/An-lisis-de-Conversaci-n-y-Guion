@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Conversación y Guion - Les Go Travel</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        h1, h2, h3, h4 {
+            color: #1a237e;
+            border-bottom: 2px solid #3f51b5;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: none;
+            font-size: 2.5em;
+            color: #3f51b5;
+        }
+        .intro {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .chat-container {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            background-color: #e5ddd5;
+            background-image: url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg'); /* Fondo sutil tipo WhatsApp */
+            height: 500px;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-bubble {
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            max-width: 75%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .sofia {
+            background-color: #ffffff;
+            align-self: flex-start;
+            border-top-left-radius: 5px;
+        }
+        .user {
+            background-color: #dcf8c6;
+            align-self: flex-end;
+            border-top-right-radius: 5px;
+        }
+        .section {
+            margin-top: 50px;
+        }
+        .section ul, .section ol {
+            padding-left: 20px;
+        }
+        .section li {
+            margin-bottom: 10px;
+        }
+        .obj-title {
+            font-weight: bold;
+            color: #c62828;
+            margin-top: 25px;
+        }
+        .obj-logic {
+            font-style: italic;
+            color: #555;
+            border-left: 3px solid #3f51b5;
+            padding-left: 15px;
+            margin-top: 5px;
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+                color: #000;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                padding: 20px;
+            }
+            h1, h2, h3, h4 {
+                color: #000;
+                border-color: #000;
+            }
+            .chat-container {
+                background: #fff;
+                height: auto;
+                overflow-y: visible;
+            }
+            .chat-bubble.user {
+                background-color: #f0f0f0 !important;
+            }
+            .chat-bubble.sofia {
+                background-color: #fafafa !important;
+                border: 1px solid #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Análisis de Conversación y Guion</h1>
+        <p class="intro">Simulación de llamada para Les Go Travel y feedback detallado.</p>
+
+        <div class="section">
+            <h2>Transcripción de la Conversación</h2>
+            <div class="chat-container">
+                <div class="chat-bubble sofia"><p>Muy buenas tardes, ¿hablo con el señor Andrés?</p></div>
+                <div class="chat-bubble user"><p>Sí, con él.</p></div>
+                <div class="chat-bubble sofia"><p>Mucho gusto, señor Andrés, ¿cómo estás? Soy Sofía, especialista en vacaciones en Les Go Travel. Te llamo porque vi tu registro en nuestras redes sociales mostrando interés en tomar unas vacaciones, y me encantaría ayudarte con eso. ¿Es correcto?</p></div>
+                <div class="chat-bubble user"><p>No recuerdo, la verdad.</p></div>
+                <div class="chat-bubble sofia"><p>No te preocupes, señor Andrés. En el registro que hiciste me aparece como Punta Cana, pero podemos explorar el destino que más te interese. Para empezar, ¿cuál sería el destino que tienes en mente para tus vacaciones?</p></div>
+                <div class="chat-bubble user"><p>Sí, Punta Cana.</p></div>
+                <div class="chat-bubble sofia"><p>¡Ah, perfecto! Punta Cana es un destino espectacular, una excelente elección. Dime, ¿cuántas personas estarían viajando?</p></div>
+                <div class="chat-bubble user"><p>2.</p></div>
+                <div class="chat-bubble sofia"><p>Perfecto, dos personas. ¿Y para qué fecha o temporada aproximada estarían planeando este viaje?</p></div>
+                <div class="chat-bubble user"><p>El otro año, temporada baja.</p></div>
+                <div class="chat-bubble sofia"><p>Entendido, para temporada baja el próximo año. ¿Y desde qué ciudad estarían saliendo?</p></div>
+                <div class="chat-bubble user"><p>Medellín.</p></div>
+                <div class="chat-bubble sofia"><p>¡Excelente información, Señor Andrés! Te cuento un poquito: en Les Go Travel estamos impulsando fuertemente el turismo hacia destinos como Punta Cana con una promoción realmente exclusiva...</p></div>
+                <div class="chat-bubble user"><p>¿Qué precio tiene?</p></div>
+                <div class="chat-bubble sofia"><p>Claro que sí, señor Andrés. Mira, el plan promocional que te menciono para dos adultos tiene un valor de tres millones quinientos mil pesos... precisamente por todos estos detalles... me encantaría que agendaramos una videollamada...</p></div>
+                <div class="chat-bubble user"><p>¿Ese precio tiene tiquetes aéreos?</p></div>
+                <div class="chat-bubble sofia"><p>Manejamos planes con o sin tiquetes, señor Andrés... Precisamente en la videollamada, el asesor experto podrá cotizarle las dos opciones...</p></div>
+                <div class="chat-bubble user"><p>¿Y en qué ciudad están ubicados?</p></div>
+                <div class="chat-bubble sofia"><p>Claro, señor Andrés. Nuestras oficinas principales están ubicadas aquí en Medellín... Precisamente para tu comodidad, toda la asesoría la manejamos de forma virtual...</p></div>
+                <div class="chat-bubble user"><p>Pero no estamos en la misma ciudad, yo salgo desde Medellín pero no vivo en Medellín. A mí no me gusta comprar si no están en la misma ciudad para verificar que son reales.</p></div>
+                <div class="chat-bubble sofia"><p>Entiendo perfectamente su preocupación, señor Andrés... Precisamente por eso, parte fundamental de la videollamada con el asesor es mostrarle todo nuestro respaldo legal... para que pueda verificar todo esto usted mismo... ¿le parece si agendamos esa cita?</p></div>
+                <div class="chat-bubble user"><p>¿Y no me lo puedes enviar por WhatsApp? Me gusta más por ahí.</p></div>
+                <div class="chat-bubble sofia"><p>Entiendo perfectamente, señor Andrés... Sin embargo, la razón por la que proponemos la videollamada es para su propio beneficio... Es una experiencia mucho más completa y transparente.</p></div>
+                <div class="chat-bubble user"><p>Es que la videollamada me queda compleja porque no tengo tiempo.</p></div>
+                <div class="chat-bubble sofia"><p>Entiendo perfectamente, señor Andrés... ¿qué le parecería si agendamos este espacio para más tarde hoy mismo? ... O si prefiere, mañana en la mañana a primera hora.</p></div>
+                <div class="chat-bubble user"><p>Pero no entiendo por qué tanto problema para darme una cotización, ¿qué más incluye el plan?</p></div>
+                <div class="chat-bubble sofia"><p>Claro, señor Andrés, y le pido disculpas si parece que hay un problema... Respondiendo a su pregunta, el plan 'todo incluido' generalmente cubre... Y precisamente por esto es que insistimos tanto en la videollamada... para que no haya sorpresas.</p></div>
+                <div class="chat-bubble user"><p>Pero, ¿para qué me voy a conectar si solo estamos cotizando?</p></div>
+                <div class="chat-bubble sofia"><p>Entiendo perfectamente su pregunta, señor Andrés. Piense en la videollamada no como un compromiso de compra, sino como la forma más eficiente y transparente para que usted obtenga toda la información que necesita...</p></div>
+                <div class="chat-bubble user"><p>OK, agendemos entonces.</p></div>
+                <div class="chat-bubble sofia"><p>¡Excelente, señor Andrés! ... necesito que tomes nota de un código exclusivo... L - E - T - DOS MIL VEINTICINCO... ¿a la videollamada te conectarías tú solo o también con la otra persona interesada?</p></div>
+                <div class="chat-bubble user"><p>Solo me conectaría yo.</p></div>
+                <div class="chat-bubble sofia"><p>Entendido, señor Andrés... ¿eres la persona encargada de tomar la decisión final sobre el plan vacacional?</p></div>
+                <div class="chat-bubble user"><p>No, sería en pareja.</p></div>
+                <div class="chat-bubble sofia"><p>Perfecto, señor Andrés, entiendo... lo ideal sería que tu pareja también nos acompañe... ¿crees que le quedaría bien a ella también? O si lo prefieres, podemos buscar otro horario...</p></div>
+                <div class="chat-bubble user"><p>¿Qué horarios manejan?</p></div>
+                <div class="chat-bubble sofia"><p>Claro que sí, señor Andrés. Nuestros asesores están disponibles de lunes a viernes, de 9:30 AM a 6:30 PM, y los sábados de 10:00 AM a 3:00 PM...</p></div>
+                <div class="chat-bubble user"><p>Hagámoslo para el sábado (hoy es miércoles).</p></div>
+                <div class="chat-bubble sofia"><p>Entiendo, señor Andrés. Solo quiero ser muy transparente con usted. Estas condiciones y los precios promocionales son por tiempo muy limitado... No puedo garantizarle que este mismo valor se mantenga hasta el sábado...</p></div>
+                <div class="chat-bubble user"><p>Hagámoslo mañana a las 5 p.m. que estaré con ella.</p></div>
+                <div class="chat-bubble sofia"><p>¡Excelente decisión, señor Andrés! ... queda confirmada nuestra videollamada para mañana jueves a las cinco de la tarde... ¿este sería tu número de WhatsApp para enviarte el enlace?</p></div>
+                <div class="chat-bubble user"><p>Sí.</p></div>
+                <div class="chat-bubble sofia"><p>¡Perfecto, señor Andrés! Ya para terminar... ¿Cuento contigo y con tu pareja para nuestra cita mañana a las cinco de la tarde?</p></div>
+                <div class="chat-bubble user"><p>Sí, es correcto.</p></div>
+                <div class="chat-bubble sofia"><p>¡Listo, señor Andrés! Muchísimas gracias por tu tiempo... En este momento te voy a escribir a tu WhatsApp... ¡Que tengas un feliz resto de día!</p></div>
+                <div class="chat-bubble user"><p>Listo, gracias.</p></div>
+                <div class="chat-bubble sofia"><p>A usted, señor Andrés. Quedo atenta a su mensaje en WhatsApp. ¡Que tenga una excelente tarde!</p></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Feedback del Guion y la Conversación</h2>
+            
+            <h3>Puntos Fuertes Demostrados</h3>
+            <ul>
+                <li><strong>Control del Flujo:</strong> El guion permitió mantener el control de la conversación en todo momento, pivotando eficazmente hacia el objetivo del agendamiento.</li>
+                <li><strong>Manejo de Objeciones Iniciales:</strong> Las respuestas predefinidas para tiquetes y ubicación funcionaron a la perfección, resolviendo dudas sin desviar el flujo.</li>
+                <li><strong>Creación de Valor sobre la Videollamada:</strong> El guion es excelente vendiendo el valor de la videollamada (transparencia, seguridad, respaldo legal) como el siguiente paso lógico y beneficioso.</li>
+                <li><strong>Identificación del Tomador de Decisiones:</strong> La estrategia de incluir a la pareja en la llamada se ejecutó con éxito, lo cual es crítico para aumentar la tasa de cierre.</li>
+                <li><strong>Manejo de la Urgencia:</strong> La regla de los 2 días se aplicó de manera justificada ("no puedo garantizar el precio") para adelantar la cita propuesta del sábado al viernes.</li>
+                <li><strong>Cierre con Compromiso:</strong> La pregunta final ("¿Cuento contigo y con tu pareja?") es una técnica potente para reducir la inasistencia a la cita.</li>
+            </ul>
+
+            <h3>Áreas de Mejora o Puntos de Fricción</h3>
+            <ul>
+                <li><strong>Riesgo de Sonar Robótico:</strong> Un agente humano necesita practicar para que el guion suene conversacional y no rígido.</li>
+                <li><strong>Insistencia vs. Persistencia:</strong> En ciertos puntos, la persistencia del guion puede ser percibida como presión. Se podría añadir una línea de "desarme" para suavizar, como: <em>"Le pido disculpas si suena insistente, mi única meta es asegurarme de que usted tenga la mejor información posible."</em></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Objeciones Adicionales y Estrategias de Respuesta</h2>
+
+            <div>
+                <h4 class="obj-title">Objeción 1: "El precio me parece muy caro."</h4>
+                <p><strong>Respuesta de Sofía:</strong> "Entiendo perfectamente su percepción, señor Andrés. A primera vista, un número puede parecer alto. Precisamente por eso es tan valiosa la videollamada. Cuando el asesor le muestre la categoría del resort de 5 estrellas, los videos de las instalaciones y todo lo que realmente incluye, se dará cuenta de que el valor que recibe es mucho mayor que el precio que paga. Permítanos demostrarle ese valor en la llamada."</p>
+                <p class="obj-logic"><strong>Lógica:</strong> No discutir el precio, sino el valor. Usar la videollamada como el escenario para demostrar ese valor.</p>
+            </div>
+
+            <div>
+                <h4 class="obj-title">Objeción 2: "No tengo el dinero en este momento."</h4>
+                <p><strong>Respuesta de Sofía:</strong> "Le entiendo perfectamente, y no se preocupe. La idea de esta llamada no es que haga un pago ahora mismo. Al contrario, es para que conozca la promoción. Recuerde que tiene hasta 12 meses para decidir cuándo viajar. La asesoría es para que se informe sin compromiso, congele este beneficio y luego pueda planificar financieramente con calma."</p>
+                <p class="obj-logic"><strong>Lógica:</strong> Desvincular la llamada de un pago inmediato y enfatizar la flexibilidad de fecha como herramienta de planificación.</p>
+            </div>
+
+            <div>
+                <h4 class="obj-title">Objeción 3: "Lo voy a pensar / Lo hablo con mi pareja y les aviso."</h4>
+                <p><strong>Respuesta de Sofía:</strong> "¡Por supuesto! Es una decisión importante. Precisamente para que puedan 'pensarlo' con toda la información correcta, es que diseñamos esta asesoría. En la llamada verán todo y tendrán al experto para resolver dudas. Es mucho más productivo. Le propongo que agendemos la cita para un momento en que ambos puedan estar y así lo 'piensan' juntos."</p>
+                <p class="obj-logic"><strong>Lógica:</strong> Posicionar la videollamada como la herramienta perfecta para "pensarlo bien", en lugar de un paso previo.</p>
+            </div>
+
+            <div>
+                <h4 class="obj-title">Objeción 4: "¿Me puede decir el nombre exacto del hotel para buscarlo yo mismo?"</h4>
+                <p><strong>Respuesta de Sofía:</strong> "¡Claro! Trabajamos con varias de las cadenas más prestigiosas como Meliá o Barceló. El hotel específico se lo muestra el asesor en la videollamada, porque nuestro convenio es directo y las condiciones promocionales no las encontrará en las páginas públicas. Es un beneficio exclusivo para nuestros clientes. Permítanos mostrarle de qué le hablo en la llamada."</p>
+                <p class="obj-logic"><strong>Lógica:</strong> Crear exclusividad. La información completa es parte del "paquete de valor" que se entrega en la videollamada.</p>
+            </div>
+
+            <div>
+                <h4 class="obj-title">Objeción 5: "Ya vi una oferta parecida más barata en otra agencia/página."</h4>
+                <p><strong>Respuesta de Sofía:</strong> "Es muy inteligente de su parte comparar. A menudo, las ofertas que parecen iguales tienen diferencias clave en la letra pequeña. Le propongo algo: conéctese a la videollamada. Con total honestidad, nuestro asesor puede analizar junto a usted esa otra oferta y mostrarle punto por punto por qué nuestro plan, con todos los beneficios, le ofrece un valor superior y más seguridad. Permítanos demostrarle la diferencia."</p>
+                <p class="obj-logic"><strong>Lógica:</strong> No competir en precio, competir en transparencia y valor agregado. Usar la videollamada como una consultoría comparativa.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
